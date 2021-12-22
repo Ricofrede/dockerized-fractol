@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  codeenv:
+    container_name: codeenv
+    build:
+      context: ./code
+      dockerfile: Dockerfile
+    volumes:
+      - ./code:/app
+    ports:
+      - 1337:1337
